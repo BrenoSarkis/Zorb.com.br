@@ -185,21 +185,21 @@ select {
   height: 650px;
 }
 .bg-slider-wrapper .flexslider .slide.slide-1 {
-  background: #65758e url('../images/background/promo-background-1.jpg') no-repeat 50% top;
+  /*background: #65758e url('../images/background/promo-background-1.jpg') no-repeat 50% top;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .bg-slider-wrapper .flexslider .slide.slide-2 {
-  background: #65758e url('../images/background/promo-background-2.jpg') no-repeat 50% top;
+  /*background: #65758e url('../images/background/promo-background-2.jpg') no-repeat 50% top;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .bg-slider-wrapper .flexslider .slide.slide-3 {
-  background: #65758e url('../images/background/promo-background-3.jpg') no-repeat 50% top;
+  /*background: #65758e url('../images/background/promo-background-3.jpg') no-repeat 50% top;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
