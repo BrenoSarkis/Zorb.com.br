@@ -6,7 +6,7 @@
 <html lang="en">
  <!--<![endif]-->
 <head>
-    <title>Responsive website template for web design &amp; development agencies</title>
+    <title>Zorb Tecnologia</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,7 +104,7 @@
                     <li class="slide slide-1">
                         <video autoplay loop><source src="../assets/videos/Aloha-mundo.mp4" type="video/mp4"/></video></li>
                     <li class="slide slide-2">
-                        <video autoplay loop><source src="../assets/videos/Agile.mp4" type="video/mp4" /></video>
+                        <video autoplay loop><source src="../assets/videos/For_Wes.mp4" type="video/mp4" /></video>
                     </li>
                     <li class="slide slide-3">
                         <video autoplay loop><source src="../assets/videos/Working-Space.mp4" type="video/mp4" /></video>
@@ -115,9 +115,9 @@
         <section id="home-promo" class="home-promo section">
             <div class="container text-center">
                 <h2 class="title">
-                    <span class="upper">Software</span>
-                    <span class="middle">Com qualidade</span>
-                    <span class="bottom">Para todos os fins</span>
+                    <span class="upper">Software de</span>
+                    <span class="middle">Qualidade</span>
+                    <span class="bottom">Para todos os tipos de negócio</span>
                 </h2>
                 <button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static">Fale Conosco</button>
             </div><!--//container-->
@@ -216,33 +216,32 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 id="contactModalLabel" class="modal-title text-center">Start your project today</h4>
-                    <p class="intro text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit laoreet tortor consequat nisi scelerisque commodo etiam justo sapien.</p>
+                    <h4 id="contactModalLabel" class="modal-title text-center">Comece o seu projeto hoje mesmo!</h4>
+                    <p class="intro text-center">Estamos sempre à espera de novos clientes, para orçamento ou dúvidas, entre em contato no formulário abaixo.</p>
                 </div>
                 <div class="modal-body">
                     <ul class="contact-info list-inline text-center">
-                        <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">0800 123 4567</a></li>
-                        <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#">hello@yourdevstudio.com</a></li>
+                        <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">21 98290-7452</a></li>
+                        <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#">contato@zorb.com.br</a></li>
                     </ul>
                     <form id="contact-form" class="contact-form" method="post" action="#">
                         <div class="row text-center">
                             <div class="contact-form-inner">
                                 <div class="row">
-
                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                                        <label class="sr-only" for="cname">Your name</label>
-                                        <input type="text" class="form-control" id="cname" name="name" placeholder="Your name" minlength="2" required>
+                                        <label class="sr-only" for="cname">Nome</label>
+                                        <input id="txtNome" type="text" class="form-control" name="Nome" placeholder="Nome" minlength="2" required>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                                        <label class="sr-only" for="cemail">Email address</label>
-                                        <input type="email" class="form-control" id="cemail" name="email" placeholder="Your email address" required>
+                                        <label class="sr-only" for="cemail">Email</label>
+                                        <input id="txtEmail" type="email" class="form-control" name="Email" placeholder="Email" required>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                        <label class="sr-only" for="cmessage">Your message</label>
-                                        <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="12" required></textarea>
+                                        <label class="sr-only" for="cmessage">Mensagem</label>
+                                        <textarea id="txtMensagem" class="form-control" name="Mensagem" placeholder="Digite a mensagem..." rows="12" required></textarea>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                        <button type="submit" class="btn btn-block btn-cta btn-cta-primary">Send Message</button>
+                                        <button id="btnEnviarEmail" type="submit" class="btn btn-block btn-cta btn-cta-primary">Enviar</button>
                                     </div>
                                 </div><!--//row-->
                             </div>
@@ -302,9 +301,21 @@
     <script type="text/javascript" src="assets/js/owl-custom.js"></script>
 
 
-    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-    <script src="assets/js/demo/style-switcher.js"></script>
-
+    <script>
+        $("#btnEnviarEmail").click(function () {
+            var form = $('#contact-form');
+            $.ajax({
+                cache: false,
+                async: true,
+                type: "POST",
+                url: "Home/EnviarEmail",
+                data: { nome: $("#txtNome").val(), email: $("#txtEmail").val(), mensagem: $("#txtMensagem").val() },
+                success: function (data) {
+                    alert(data);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
