@@ -61,87 +61,9 @@
 </head>
 
 <body class="home-page">
-    <div class="header-wrapper header-wrapper-home">
-        <!-- ******HEADER****** -->
-        <header id="header" class="header navbar-fixed-top">
-            <div class="container">
-                <h1 class="logo">
-                    <a href="index.html"><span class="highlight">Dev</span>Studio</a>
-                </h1><!--//logo-->
-                <nav class="main-nav navbar-right" role="navigation">
-                    <div class="navbar-header">
-                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button><!--//nav-toggle-->
-                    </div><!--//navbar-header-->
-                    <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active nav-item"><a href="/">Zorb</a></li>
-                            <li class="nav-item">@Html.ActionLink("Sobre", "Sobre")</li>
-                            <li class="nav-item last"><a href="contact.html">Contato</a></li>
-                        </ul><!--//nav-->
-                    </div><!--//navabr-collapse-->
-                </nav><!--//main-nav-->
-            </div><!--//container-->
-        </header><!--//header-->
-        <div class="bg-slider-wrapper">
-            <div id="bg-slider" class="flexslider bg-slider">
-                <ul class="slides">
-                    <li class="slide slide-1">
-                        <video autoplay loop preload="metadata" >
-                            <source src="~/assets/videos/Aloha-mundo.mp4">
-                            <source src="~/assets/videos/Aloha-mundo.ogg">
-                            <source src="~/assets/videos/Aloha-mundo.webm">
-                        </video>
-                    </li>
-                    <li class="slide slide-2">
-                        <video autoplay loop preload="metadata">
-                            <source src="~/assets/videos/For_Wes.mp4">
-                            <source src="~/assets/videos/For_Wes.ogg">
-                            <source src="~/assets/videos/For_Wes.webm">
-                        </video>
-                    </li>
-                    <li class="slide slide-3">
-                        <video autoplay loop preload="metadata">
-                            <source src="~/assets/videos/Working-Space.mp4">
-                            <source src="~/assets/videos/Working-Space.ogg">
-                            <source src="~/assets/videos/Working-Space.webm">
-                        </video>
-                    </li>
-                </ul>
-            </div>
-        </div><!--//bg-slider-wrapper-->
-        <section id="home-promo" class="home-promo section">
-            <div class="container text-center">
-                <h2 class="title">
-                    <span class="upper">Software de</span>
-                    <span class="middle">Qualidade</span>
-                    <span class="bottom">Para todos os tipos de negócio</span>
-                </h2>
-                <button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static">Fale Conosco</button>
-            </div><!--//container-->
-        </section><!--//promo-->
-    </div><!--//header-wrapper-->
     <div>
         @RenderBody();
     </div>
-    <!-- ******CTA Section****** -->
-    <section id="cta-section" class="cta-section section text-center home-cta-section">
-        <div class="container">
-            <h2 class="title">Quer saber mais?</h2>
-            <p class="phone contact-info">
-                <span class="intro">Ligue e fale conosco</span>
-                <span class="info"><a href="tel:+08001234567">21 98290-7452</a></span>
-            </p><!--//phone-->
-            <p class="email contact-info">
-                <span class="intro">Ou envie um email para</span>
-                <span class="info"><a href="mailto:contato@zorb.com.br">contato@zorb.com.br</a></span>
-            </p><!--//phone-->
-        </div><!--//container-->
-    </section><!--//cta-section-->
     <!-- ******FOOTER****** -->
     <footer class="footer">
         <div class="footer-content">
@@ -233,11 +155,11 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 id="contactModalLabel" class="modal-title text-center">Comece o seu projeto hoje mesmo!</h4>
-                    <p class="intro text-center">Estamos sempre à espera de novos clientes, para orçamento ou dúvidas, entre em contato no formulário abaixo.</p>
+                    <p class="intro text-center">Estamos sempre em busca de novos clientes, entre em contato no formulário abaixo.</p>
                 </div>
                 <div class="modal-body">
                     <ul class="contact-info list-inline text-center">
-                        <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">21 98290-7452</a></li>
+                        <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="">21 98290-7452</a></li>
                         <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#">contato@zorb.com.br</a></li>
                     </ul>
                     <form id="contact-form" class="contact-form" method="post" action="#">

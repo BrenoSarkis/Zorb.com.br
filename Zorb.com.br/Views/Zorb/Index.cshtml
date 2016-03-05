@@ -1,9 +1,58 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="header-wrapper header-wrapper-home">
+    <!-- ******HEADER****** -->
+    <header id="header" class="header navbar-fixed-top">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html"><span class="highlight">Dev</span>Studio</a>
+            </h1><!--//logo-->
+            <nav class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item"><a href="/">Zorb</a></li>
+                        <li class="nav-item">@Html.ActionLink("Sobre", "Sobre")</li>
+                        <li class="nav-item last">@Html.ActionLink("Contato", "Contato")</li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div><!--//container-->
+    </header><!--//header-->
+    <div class="bg-slider-wrapper">
+        <div id="bg-slider" class="flexslider bg-slider">
+            <ul class="slides">
+                <li class="slide slide-1">
+                    <video autoplay loop preload="metadata">
+                        <source src="~/assets/videos/Aloha-mundo.mp4">
+                        <source src="~/assets/videos/Aloha-mundo.ogg">
+                        <source src="~/assets/videos/Aloha-mundo.webm">
+                    </video>
+                </li>
+            </ul>
+        </div>
+    </div><!--//bg-slider-wrapper-->
+    <section id="home-promo" class="home-promo section">
+        <div class="container text-center">
+            <h2 class="title">
+                <span class="upper">Software de</span>
+                <span class="middle">Qualidade</span>
+                <span class="bottom">Para todos os tipos de negócio</span>
+            </h2>
+            <button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static">Fale Conosco</button>
+        </div><!--//container-->
+    </section><!--//promo-->
+</div><!--//header-wrapper-->
 
-
-    <!-- ******Why Section****** -->
+<!-- ******Why Section****** -->
 <section id="who" class="who section">
     <div class="container text-center">
         <h2 class="title text-center">Quem somos</h2>
