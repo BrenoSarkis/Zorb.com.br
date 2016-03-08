@@ -4,7 +4,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
- <!--<![endif]-->
+<!--<![endif]-->
 <head>
     <title>Zorb Tecnologia</title>
     <!-- Meta -->
@@ -34,25 +34,31 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-24707561-22', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-24707561-22', 'auto');
+        ga('send', 'pageview');
 
     </script>
     <!-- Facebook Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','//connect.facebook.net/en_US/fbevents.js');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1506230579705064');
-    fbq('track', "PageView");</script>
+        fbq('init', '1506230579705064');
+        fbq('track', "PageView");</script>
     <noscript>
         <img height="1" width="1" style="display:none"
              src="https://www.facebook.com/tr?id=1506230579705064&ev=PageView&noscript=1" />
@@ -71,64 +77,37 @@
                 <div class="row">
                     <div class="footer-col col-md-3 col-sm-4 links-col">
                         <div class="footer-col-inner">
-                            <h3 class="sub-title">Quick Links</h3>
+                            <h3 class="sub-title">Links</h3>
                             <ul class="list-unstyled">
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="work.html">Our work</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
+                                <li><a href="/">Zorb</a></li>
+                                <li>@Html.ActionLink("Sobre", "Sobre")</li>
+                                <li>@Html.ActionLink("Contato", "Contato")</li>
                             </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->
-                    <div class="footer-col col-md-6 col-sm-8 blog-col">
-                        <div class="footer-col-inner">
-                            <h3 class="sub-title">Latest From Our Blog</h3>
-                            <div class="item">
-                                <figure class="figure">
-                                    <img class="img-responsive" src="~/assets/images/blog/blog-tiny-thumb-1.jpg" alt="" />
-                                </figure>
-                                <div class="content">
-                                    <h4 class="post-title"><a href="blog-post.html">DevStudio helps XYZ launch</a></h4>
-                                    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales dolor ut ligula faucibus...</p>
-                                    <ul class="meta list-inline">
-                                        <li>18 Feb 2015</li>
-                                        <li>James Lee</li>
-                                    </ul>
-                                </div><!--//content-->
-                            </div>
-                            <div class="item">
-                                <figure class="figure">
-                                    <img class="img-responsive" src="~/assets/images/blog/blog-tiny-thumb-2.jpg" alt="" />
-                                </figure>
-                                <div class="content">
-                                    <h4 class="post-title"><a href="blog-post.html">devAid - Free Bootstrap Theme</a></h4>
-                                    <p class="intro">Mauris libero leo, dapibus a congue ut, mollis sed nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus augue nec nulla ultricies...</p>
-                                    <ul class="meta list-inline">
-                                        <li>21 Dec 2014</li>
-                                        <li>Vincent Fowler</li>
-                                    </ul>
-                                </div><!--//content-->
-                            </div>
                         </div><!--//footer-col-inner-->
                     </div><!--//foooter-col-->
                     <div class="footer-col col-md-3 col-sm-12 contact-col">
                         <div class="footer-col-inner">
-                            <h3 class="sub-title">Get In Touch</h3>
+                            <h3 class="sub-title">Contato</h3>
                             <p class="intro"></p>
                             <div class="row">
                                 <p class="adr clearfix col-md-12 col-sm-4">
                                     <span class="fs1" aria-hidden="true" data-icon="&#xe01d;"></span>
                                     <span class="adr-group">
-                                        <span class="street-address">56 College Green Road</span><br />
-                                        <span class="city">Bristol</span><br />
-                                        <span class="postal-code">BS1 XR18</span><br />
-                                        <span class="country-name">UK</span>
+                                        <span class="street-address">Rio de Janeiro / Belo Horizonte</span><br />
+                                        <span class="country-name">Brasil</span>
                                     </span>
                                 </p>
-                                <p class="tel col-md-12 col-sm-4"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><a href="tel:+08001234567">0800 123 4567</a></p>
-                                <p class="email col-md-12 col-sm-4"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><a href="#">hello@yourdevstudio.com</a></p>
+                                <p class="tel col-md-12 col-sm-4"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><a href="tel:+08001234567"> 21 98290-7452</a></p>
+                                <p class="email col-md-12 col-sm-4"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><a href="#">contato@zorb.com.br</a></p>
+                            </div>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->
+                    <div class="footer-col col-md-6 col-sm-8 blog-col">
+                        <div class="footer-col-inner">
+                            <div class="item">
+                                <div class="content">
+                                    <h3 class="sub-title">“My mentality is that of a samurai. I would rather commit seppuku than fail.” - Elon Musk</h3>
+                                </div><!--//content-->
                             </div>
                         </div><!--//footer-col-inner-->
                     </div><!--//foooter-col-->
@@ -144,7 +123,7 @@
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li class="last"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                 </ul>
-                <small class="copyright text-center">Copyright @DateTime.Now.Year <a href="http://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
+                <small class="copyright text-center">Copyright @DateTime.Now.Year <a href="" target="_blank">Zorb</a></small>
             </div><!--//container-->
         </div><!--//bottom-bar-->
     </footer><!--//footer-->
@@ -162,30 +141,7 @@
                         <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="">21 98290-7452</a></li>
                         <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#">contato@zorb.com.br</a></li>
                     </ul>
-                    <form id="contact-form" class="contact-form" method="post" action="#">
-                        <div class="row text-center">
-                            <div class="contact-form-inner">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                                        <label class="sr-only" for="cname">Nome</label>
-                                        <input id="txtNome" type="text" class="form-control" name="Nome" placeholder="Nome" minlength="2" required>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                                        <label class="sr-only" for="cemail">Email</label>
-                                        <input id="txtEmail" type="email" class="form-control" name="Email" placeholder="Email" required>
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                        <label class="sr-only" for="cmessage">Mensagem</label>
-                                        <textarea id="txtMensagem" class="form-control" name="Mensagem" placeholder="Digite a mensagem..." rows="12" required></textarea>
-                                    </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                        <button id="btnEnviarEmail" type="submit" class="btn btn-block btn-cta btn-cta-primary">Enviar</button>
-                                    </div>
-                                </div><!--//row-->
-                            </div>
-                        </div><!--//row-->
-                        <div id="form-messages"></div>
-                    </form><!--//contact-form-->
+                    @{ Html.RenderPartial("_Email"); }
                 </div><!--//modal-body-->
             </div><!--//modal-content-->
         </div><!--//modal-dialog-->
@@ -216,22 +172,33 @@
     <script type="text/javascript" src="~/assets/plugins/owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="~/assets/js/owl-custom.js"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#contact-form").submit(function (event) {
+                event.preventDefault();
+                event.target.checkValidity();
+                return false;
+            });
 
-    <script>
-        $("#btnEnviarEmail").click(function () {
-            var form = $('#contact-form');
-            $.ajax({
-                cache: false,
-                async: true,
-                type: "POST",
-                url: "Home/EnviarEmail",
-                data: { nome: $("#txtNome").val(), email: $("#txtEmail").val(), mensagem: $("#txtMensagem").val() },
-                success: function (data) {
-                    alert(data);
-                }
+            $("#btnEnviarEmail").click(function () {
+                var form = $('#contact-form');
+                $.ajax({
+                    cache: false,
+                    async: true,
+                    type: "POST",
+                    url: "@Url.Action("EnviarEmail", "Zorb")",
+                    data: { nome: $("#txtNome").val(), email: $("#txtEmail").val(), mensagem: $("#txtMensagem").val() },
+                    success: function (data) {
+                        if (data == "True") {
+                            $("#alertaDeSucesso").show();
+                        }
+                        else {
+                            $("#alertaDeErro").show();
+                        }
+                    },
+                });
             });
         });
     </script>
 </body>
 </html>
-

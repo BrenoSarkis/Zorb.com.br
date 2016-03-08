@@ -1,0 +1,34 @@
+﻿
+<form id="contact-form" class="contact-form" method="post" action="#">
+    <div class="row text-center">
+        <div class="contact-form-inner">
+            <div class="row">
+                <div id="alertaDeSucesso" style="display:none;" class="alert alert-success">
+                    <a href="#" class="close" onclick="$('#alertaDeSucesso').hide()" aria-label="fecharAlerta">&times;</a>
+                    <strong>Mensagem enviada!</strong> Iremos responder em até 24 horas.
+                </div>
+                <div id="alertaDeErro" style="display:none;" class="alert alert-danger">
+                    <a href="#" class="close" onclick="$('#alertaDeErro').hide()" aria-label="fecharAlerta">&times;</a>
+                    <strong>Ops... </strong> Algo deu errado no envio do e-mail, nossos analistas já foram avisados. Tente novamente em breve ou faça o contato por telefone.
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                    <label class="sr-only" for="cname">Nome</label>
+                    <input id="txtNome" type="text" class="form-control" name="Nome" placeholder="Nome" minlength="2" required>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                    <label class="sr-only" for="cemail">Email</label>
+                    <input id="txtEmail" type="email" class="form-control" name="Email" placeholder="Email" required>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                    <label class="sr-only" for="cmessage">Mensagem</label>
+                    <textarea id="txtMensagem" class="form-control" name="Mensagem" placeholder="Digite a mensagem..." rows="12" required></textarea>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                    <button id="btnEnviarEmail" type="submit" class="btn btn-block btn-cta btn-cta-primary">Enviar</button>
+                </div>
+            </div><!--//row-->
+        </div>
+    </div><!--//row-->
+    <div id="form-messages"></div>
+</form><!--//contact-form-->
+

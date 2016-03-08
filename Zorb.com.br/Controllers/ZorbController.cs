@@ -26,24 +26,19 @@ namespace Zorb.com.br.Controllers
             return View();
         }
 
-        public string EnviarEmail(string nome, string email, string mensagem)
+        public bool EnviarEmail(string nome, string email, string mensagem)
         {
-            var username = System.Environment.GetEnvironmentVariable("SENDGRID_USER");
-            var pswd = System.Environment.GetEnvironmentVariable("SENDGRID_PASS");
+            try
+            {
+                var usuarioDoSendGrid = System.Environment.GetEnvironmentVariable("SENDGRID_USER");
+                var senhaDoSendGrid = System.Environment.GetEnvironmentVariable("SENDGRID_PASS");
 
-            //var username = "azure_2766a2fb7a4faafa71e5e711d4aacfa7@azure.com";
-            //var pswd = "8nHqhlR7528bTOZ";
+                var credenciais = new NetworkCredential(usuarioDoSendGrid, senhaDoSendGrid);
+                var transporteWeb = new Web(credenciais);
+                var mensagemDoSendGrid = new SendGridMessage();
 
-            var credentials = new NetworkCredential(username, pswd);
-            // Create an Web transport for sending email.
-            var transportWeb = new Web(credentials);
-            var myMessage = new SendGridMessage();
-
-            // Add the message properties.
-            myMessage.From = new MailAddress(email);
-
-            // Add multiple addresses to the To field.
-            List<String> recipients = new List<String>
+                mensagemDoSendGrid.From = new MailAddress(email);
+                List<String> recipients = new List<String>
             {
                 @"Andressa Feijoo <andressa.feijoo@hotmail.com>",
                 @"Hannah Feijoo <hannahfeijoo@hotmail.com>",
@@ -51,15 +46,17 @@ namespace Zorb.com.br.Controllers
                 @"Breno Sarkis <sarkisbreno@gmail.com>"
             };
 
-            myMessage.AddTo(recipients);
+                mensagemDoSendGrid.AddTo(recipients);
+                mensagemDoSendGrid.Subject = "Zorb";
+                mensagemDoSendGrid.Text = mensagem;
+                transporteWeb.DeliverAsync(mensagemDoSendGrid);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
 
-            myMessage.Subject = "Alguém entrou em contato pelo site!";
-
-            //Add the HTML and Text bodies
-            //myMessage.Html = mensagem;
-            myMessage.Text = mensagem;
-            transportWeb.DeliverAsync(myMessage);
-            return "";
+            return true;
         }
     }
 }

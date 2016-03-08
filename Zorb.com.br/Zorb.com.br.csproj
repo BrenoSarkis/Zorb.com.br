@@ -163,6 +163,7 @@
     <Content Include="assets\images\background\promo-background-2.jpg" />
     <Content Include="assets\images\background\promo-background-3.jpg" />
     <Content Include="assets\images\background\rio-de-janeiro2.jpg" />
+    <Content Include="assets\images\background\rio.png" />
     <Content Include="assets\images\blog\blog-1.jpg" />
     <Content Include="assets\images\blog\blog-2.jpg" />
     <Content Include="assets\images\blog\blog-3.jpg" />
@@ -1223,6 +1224,7 @@
     <Content Include="Views\Zorb\Sobre.cshtml" />
     <Content Include="Views\Zorb\Contato.cshtml" />
     <Content Include="Views\Zorb\Index.cshtml" />
+    <Content Include="Views\Zorb\_Email.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
